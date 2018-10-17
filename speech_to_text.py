@@ -5,7 +5,7 @@ import json
 user = "e9af561c-e282-47b8-bb1f-8b0c192341e3"
 pswd = "PJxoNAHVgpT2"
 #音声のデータの定義
-audio_file = open("voice.wav", "rb") #どの音声ファイルを開くか
+audio_file = open("sample.wav", "rb") #どの音声ファイルを開くか
 cont_type = "audio/wav" #wavファイルを指定
 lang = "ja-JP_BroadbandModel" #日本語のデータである
 
@@ -19,6 +19,6 @@ for i in range(len(result_json.result["results"])):#形態素解析済み言葉�
 
 #ファイルに書き込む
 result = json.dumps(result_json.result, indent=2) #json形式に変換する
-f = open("speech_to_text.json", "w")　#（名前，書きこむ）ファイルに書き込む
+f = open("speech_to_text.json", "w") #（名前，書きこむ）ファイルに書き込む
 f.write(result)
 f.close()
